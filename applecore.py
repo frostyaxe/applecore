@@ -17,7 +17,7 @@ with open('tokenizer.pkl', 'rb') as file:
     tokenizer = pickle.load(file)
 model = tf.keras.models.load_model('applecore.h5')
 log_sequences = tokenizer.texts_to_sequences([text])
-action_ = ds.loc[np.argmax(model.predict(pad_sequences(log_sequences, maxlen=1000, padding="post")))]["resolution"]
+action_ = ds.loc[np.argmax(model.predict(pad_sequences(log_sequences, maxlen=1000, padding="post"),verbose=2))]["resolution"]
 # ends here
 
 action = getattr(actions, action_)
