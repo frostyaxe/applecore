@@ -21,4 +21,9 @@ action_ = ds.loc[np.argmax(model.predict(pad_sequences(log_sequences, maxlen=100
 # ends here
 
 action = getattr(actions, action_)
+print("")
+print("----------------------------------------------------------------")
+print("                   Applecore Solution                           ")
+print("----------------------------------------------------------------")
+
 print(action(text))
