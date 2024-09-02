@@ -3,7 +3,7 @@ from os import path
 
 def command_not_found(raw_build_log):
     
-    m = search('\'(.+?)\' is not recognized as an internal or external command', raw_build_log)
+    m = search('\'(\w+)\' is not recognized as an internal or external command', raw_build_log)
     command = ""
     path_exist_status = ""
     if m:
