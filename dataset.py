@@ -6,6 +6,10 @@ dataset = [
     {
         "error": "Unable download artifacts",
         "resolution": "artifact_not_found"
+    },
+    {
+        "error": "ModuleNotFoundError: No module named",
+        "resolution": "python_module_not_found"    
     }
 
 
